@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reportes - Biblioteca Mallco Rancho</title>
+
+    <link rel="stylesheet" href="css/reportes.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Biblioteca Mallco Rancho</h1>
+
+        <nav>
+
+            <button onclick="location.href='inicio.html'">
+                Inicio
+            </button>
+
+            <button onclick="location.href='biblioteca.html'">
+                Biblioteca
+            </button>
+
+            <button onclick="location.href='biblioteca.html#buscador'">
+                Buscar
+            </button>
+
+            <button onclick="location.href='prestamos.html'">
+                Préstamos
+            </button>
+
+            <button onclick="location.href='reportes.html'">
+                Reportes
+            </button>
+
+            <button onclick="location.href='favoritos.html'">
+                ⭐ Favoritos
+            </button>
+
+            <button onclick="location.href='cuenta.html'">
+                Mi cuenta
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="titulo">
+
+            <h2>📊 Reportes</h2>
+
+            <p>
+                Consulta los libros prestados y los usuarios
+                según la fecha seleccionada.
+            </p>
+
+        </section>
+
+
+        <section class="filtros">
+
+            <div class="filtro">
+
+                <h3>📅 Buscar por fecha</h3>
+
+                <input type="date" id="fecha">
+
+                <button onclick="buscarFecha()">
+                    Buscar
+                </button>
+
+            </div>
+
+
+            <div class="filtro">
+
+                <h3>📆 Buscar por fechas</h3>
+
+                <label>Desde:</label>
+
+                <input type="date" id="desde">
+
+                <label>Hasta:</label>
+
+                <input type="date" id="hasta">
+
+                <button onclick="buscarRango()">
+                    Buscar
+                </button>
+
+            </div>
+
+
+            <div class="filtro">
+
+    <h3>🗓️ Buscar por mes</h3>
+
+    <button class="selector-mes" onclick="abrirMes()">
+        Seleccionar mes
+    </button>
+
+    <div id="calendarioMes" class="calendario-mes">
+
+        <div class="encabezado-mes">
+
+            <button onclick="cambiarAño(-1)">‹</button>
+
+            <span id="añoActual"></span>
+
+            <button onclick="cambiarAño(1)">›</button>
+
+        </div>
+
+        <div class="meses">
+
+            <button onclick="seleccionarMes(1)">Enero</button>
+            <button onclick="seleccionarMes(2)">Febrero</button>
+            <button onclick="seleccionarMes(3)">Marzo</button>
+            <button onclick="seleccionarMes(4)">Abril</button>
+            <button onclick="seleccionarMes(5)">Mayo</button>
+            <button onclick="seleccionarMes(6)">Junio</button>
+            <button onclick="seleccionarMes(7)">Julio</button>
+            <button onclick="seleccionarMes(8)">Agosto</button>
+            <button onclick="seleccionarMes(9)">Septiembre</button>
+            <button onclick="seleccionarMes(10)">Octubre</button>
+            <button onclick="seleccionarMes(11)">Noviembre</button>
+            <button onclick="seleccionarMes(12)">Diciembre</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+        </section>
+
+
+        <section class="resultados">
+
+            <h2>Resultados</h2>
+
+            <div id="reporte">
+
+                <p>
+                    Selecciona una fecha, un rango o un mes
+                    para ver el reporte.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Unidad Educativa Mallco Rancho
+        </p>
+
+    </footer>
+
+
+    <script src="js/proteger.js"></script>
+
+    <script src="js/reportes.js"></script>
+
+</body>
+
+</html>

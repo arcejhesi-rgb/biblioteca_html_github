@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca - Mallco Rancho</title>
+    <link rel="stylesheet" href="css/biblioteca.css">
+</head>
+<body>
+    <header>
+        <h1>Biblioteca Mallco Rancho</h1>
+        <nav>
+            <a href="inicio.html">Inicio</a>
+            <a href="biblioteca.html">Biblioteca</a>
+            <a href="#buscador">Buscar</a>
+            <a href="favoritos.html">Favoritos</a>
+            <a href="cuenta.html">Mi cuenta</a>
+            <a href="reportes.html">Reportes</a>
+        </nav>
+    </header>
+ <main>
+ <section class="titulo">
+ <h2>BIBLIOTECA</h2>
+  <p>Encuentra libros y recursos organizados por materia.</p>
+ </section>
+ <section class="buscador">
+<h2>Buscar libros</h2>
+    <input
+        type="text"
+        id="buscarLibro"
+        placeholder="Escribe el nombre del libro..."
+    >
+</section>
+<section class="materias">
+ <div class="materia">
+ <h3>Matemáticas</h3>
+<button onclick="mostrarLibros('Matematicas')"> Ver libros</button>
+            </div>
+ <div class="materia">
+<h3>Física</h3>
+<button onclick="mostrarLibros('Fisica')">  Ver libros</button>
+            </div>
+            <div class="materia">
+                <h3>Química</h3>
+<button onclick="mostrarLibros('Quimica')"> Ver libros </button>
+            </div>
+ <div class="materia">
+<h3>Lenguaje</h3>
+ <button onclick="mostrarLibros('Lenguaje')">  Ver libros</button>
+            </div>
+            <div class="materia">
+                <h3>Ciencias Sociales</h3>
+<button onclick="mostrarLibros('Sociales')">   Ver libros</button>
+            </div>
+            <div class="materia">
+                <h3>Sistemas Informáticos</h3>
+                <button onclick="mostrarLibros('Sistemas')">
+                    Ver libros
+                </button>
+            </div>
+        </section>
+        <section class="lista-libros">
+            <h2>Libros disponibles</h2>
+            <div id="libros"></div>
+        </section>
+ <div id="ventanaPrestamo" class="ventana">
+            <div class="formulario">
+                <h2>Solicitar préstamo</h2>
+                <p id="nombreLibro"></p>
+             <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Nombre completo"
+                >
+                <input
+                    type="text"
+                    id="curso"
+                    placeholder="Curso"
+                >
+                <label>Fecha de préstamo</label>
+                <input
+                    type="date"
+                    id="fechaPrestamo"
+                >
+                <label>Fecha de devolución</label>
+                <input
+                    type="date"
+                    id="fechaDevolucion"
+                >
+                <button onclick="confirmarPrestamo()">
+                    Confirmar préstamo
+                </button>
+                <button
+                    class="cerrar"
+                    onclick="cerrarPrestamo()"
+                >
+                    Cancelar
+                </button>
+                <p id="mensajePrestamo"></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Unidad Educativa Mallco Rancho</p>
+    </footer>
+   <script src="js/proteger.js"></script>
+<script src="js/biblioteca.js"></script>
+</body>
+</html>
